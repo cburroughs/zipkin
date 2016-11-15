@@ -41,7 +41,7 @@ before_install:
   - echo "https://$GH_TOKEN:@github.com" > .git/credentials
 
   # Manually install elasticsearch until https://github.com/travis-ci/apt-source-whitelist/issues/190
-  - curl -SL https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.2.1/elasticsearch-2.2.1.tar.gz | tar xz
+  - curl -SL https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.0.tar.gz | tar xz
   - elasticsearch-*/bin/elasticsearch -d > /dev/null
 
   # Manually install and run zk+kafka as it isn't an available service
